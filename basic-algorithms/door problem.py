@@ -19,4 +19,6 @@ students = int(input("enter number of students: "))
  
 #now we use pigeon hole rule for solving the problem(ceiling of students/doors)
 maximum_students_of_door_1 = math.ceil(students/doors)
+
+#output the result
 print("maximum number of students passing through door one:",maximum_students_of_door_1)
