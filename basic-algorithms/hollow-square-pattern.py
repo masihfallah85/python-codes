@@ -25,12 +25,17 @@ if bigger_edge <= smaller_edge :
     
     print("wrong edges")
 
+#if square can't be centered properly
+elif bigger_edge % 2 != smaller_edge % 2:
+     
+     print("wrong edges")
+
 else:
-    #calculate inner square's bounds within outer square
+    #calculate inner hollow square's bounds within outer square
     row_lower_bound = (bigger_edge - smaller_edge) // 2
-    row_higher_bound =  bigger_edge - row_lower_bound - 1
+    row_upper_bound =  bigger_edge - row_lower_bound - 1
     column_lower_bound = row_lower_bound
-    column_higher_bound = row_higher_bound
+    column_upper_bound = row_upper_bound
 
     #loop through rows of square
     for row in range(bigger_edge):
@@ -39,7 +44,7 @@ else:
         for column in range(bigger_edge):
 
             #check if row and column fits inside hollow part,else print # symbol
-            if (row_lower_bound <= row <= row_higher_bound) and (column_lower_bound <= column <= column_higher_bound):
+            if (row_lower_bound <= row <= row_upper_bound) and (column_lower_bound <= column <= column_upper_bound):
                 
                 print( end = "  ")
 
