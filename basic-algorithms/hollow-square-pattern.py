@@ -1,4 +1,4 @@
-#hollow-square-pattern
+#hollow-square=pattern
 
 """
 In this script user enters two square's edges,one bigger and one smaller.
