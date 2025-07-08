@@ -11,13 +11,13 @@ number = int(input("Enter a number: "))
 #create a variable for sum of divisors
 total = 0
 
-#loop through  1 to half of number to find it's devisors
+#loop through  1 to half of number to find it's divisors
 for divisor in range(1,number // 2 + 1):
 
-    #check if it's actually number's devisor
+    #check if it's actually number's divisor
     if number % divisor == 0:
         
-        #add devisor to sum
+        #add divisor to sum
         total += divisor
 
 #check if it's a perfect number and print the result
