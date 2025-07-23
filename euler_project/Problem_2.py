@@ -13,7 +13,7 @@ term_2 = 2
 total = 2
 
 #Loop through sequence's numbers
-while term_2 != 4_000_000:
+while term_2 <= 4_000_000:
 
     term_1 , term_2 = term_2 , term_1 + term_2
 
