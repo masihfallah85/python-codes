@@ -1,25 +1,18 @@
-#Problem_2
+#Problem_1
 
 """
-Find sum of even valued numbers of fibonacci sequence that do not exceed four milion
+Find sum of all multiples of 3 or 5 below 1000
 """
+#Create a variable for sum
+sum = 0
 
-#Create variables for first two terms
-term_1 = 1
+#Loop through numbers to add to sum 
+for i in range(3,1000):
 
-term_2 = 2
+    #Check if i is multiple of 3 or 5
+    if i % 3 == 0 or i % 5 == 0:
 
-#Create a variable to store sum of terms
-total = 2
-
-#Loop through sequence's numbers
-while term_2 != 4_000_000:
-
-    term_1 , term_2 = term_2 , term_1 + term_2
-
-    if term_2 % 2 == 0:
-
-        total += term_2
+        sum += i
 
 #Print the result
-print("Sum of even valued fibonacci numbers that do not exceed 4 milion: ",total)
+print("sum of multiples of 3 or 5 from 1 to 1000: ",sum)
