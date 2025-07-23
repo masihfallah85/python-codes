@@ -1,77 +1,31 @@
-#Geuss_the_number.py
+#Celsius_to_fahrenheit.py
 
 """
-In this script we implement a simple game of geussing a number between 1 to 1000.
+In this script,we turn celsius degrees from 1 to n to fahrenheit degrees and show them in tabular form.
 """
 
-#import randrange from random library to generate a random number
-from random import randrange
+#Defining a function wich changes celsius to fahrenheit
+def convert(celsius):
 
-def game_result(geuss,number):
-    
-    """This function returns game results"""
+    fahrenheit = (9 / 5) * celsius + 32
 
-    if geuss < number:
+    return fahrenheit
 
-        return "Too low","No"
-    
-    elif geuss > number:
+#Prompt user to input a celsius degree bigger than 1
+celsius = int(input("Enter a celsius degree bigger than 1: "))
 
-        return "Too high","No"
-    
-    else:
+#Check if user entered correct number
+if celsius <= 1:
 
-        return "Correct","Yes"
-    
-#Create a variable for geussed number
-geuss = 0
+    print("invalid degree")
 
-#Create a variable for result of the game
-result = "No"
+else:
 
-#Create a variable to store game status
-status = "Continue"
+    #Create tabel's layout
+    print("Celsius  Fahrenheit")
 
-#Create a variable for hint
-hint  = ""
-
-#Create a variable for storing a random number between 1 to 1000
-number = randrange(1,1001)
-
-#Continue game while user doesn't want to finish game
-while status == "Continue":
-
-    #Prompt user to  Geuss a number between 1 to 1000
-    geuss = int(input("Guess a number between 1 to 1000: "))
-
-    #Check input
-    if geuss < 1 or geuss > 1000:
-
-        print("Invalid input,it should be between 1 to 1000")
-
-    else:
+    #Loop through degrees to print them
+    for i in range(1,celsius):
         
-        #Show geuss result
-        hint , result = game_result(geuss,number)
-        
-        print("Result: ",result)
-
-        print("Hint: ",hint)
-
-        #Check if user answered correctly
-        if result == "Yes" :
-
-            #Prompt user to finish or continue
-            status = input("Do you want to play again?: ")
-
-            if status == "Yes":
-                 
-                result = "No"
-
-                number = randrange(1,1001) 
-                
-                status = "Continue"
-            
-            else:
-
-                status = "Finish"
+        #round fahrenheit degree to 2 digits using built in round function
+        print(f"{i:>7}  {round(convert(i),2):>10}")
