@@ -51,7 +51,7 @@ else:
     is_first = True
 
     #Loop through 2 to square root of number to show it's prime decomposition
-    for i in range(2,int(sqrt(number)) + 1):
+    for i in range(2,number // 2 + 1):
 
         #Check if i is divisor of number and a prime
         if number % i == 0  and prime(i):
