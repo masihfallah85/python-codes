@@ -1,4 +1,4 @@
-#Problem_10
+#Problem_10.py
 
 """
 What's sum of prime numbers below 2 million?
