@@ -13,7 +13,7 @@ in floyde-hoare logic if {p}c{Q} wich p is initial conditon,c is command sand Q 
 
 {A[1:i-1] is sorted and i <= n}insert A[i] to A[1:i-1] {A[1:i] is sorted} / {A[1:i-1] = A[1] is sorted}for i 2 to n insert A[i]{A[1:n] is sorted}
 
-wich top triple  is logic isndie the loop and bottom triple is logic outside the loop prespective.
+Wich top triple  is logic isndie the loop and bottom triple is logic outside the loop prespective.
 """
 
 
@@ -54,7 +54,7 @@ lst = [4,6,5,8,7,9,3,1,2]
 print(insertion_sort(lst))
 
 """
-best case accures when all  array is sorted,so the while loop exit on the conditon so ti = 1 therefor:
+Best case accures when all  array is sorted,so the while loop exit on the conditon so ti = 1 therefor:
 
 T(n) =  c1 * n + c2 * (n - 1) + c3 * n-1 + c4 * sum of (1) from 1 to n-1 + c5 * sum of (1 - 1) from 1 to n-1 + c6 * sum of (1 - 1) from 1 to n-1 + c7 * (n -1) =
 
@@ -62,16 +62,16 @@ c1 * n + c2 * (n - 1) + c3 * (n - 1) + c4 * (n - 1) + c7 * (n - 1) = an + b , a 
  
 of  Θ(n).
 
-worst case accures when all array is reverse sorted,so in each while loop ti happens i times,therefor:
+Worst case accures when all array is reverse sorted,so in each while loop ti happens i + 1 times,therefor:
 
-T(n) =  c1 * n + c2 * (n - 1) + c3 * n-1 + c4 * sum of (i) from 1 to n-1 + c5 * sum of (i - 1) from 1 to n-1 + c6 * sum of (1 - 1) from 1 to n-1 + c7 * (n -1) =
+T(n) =  c1 * n + c2 * (n - 1) + c3 * n-1 + c4 * sum of (i + 1) from 1 to n-1 + c5 * sum of (i) from 1 to n-1 + c6 * sum of (1 - 1) from 1 to n-1 + c7 * (n -1) =
 
-c1 * n + c2 * (n - 1) + c3 * (n - 1) + c4 * (n)(n - 1) / 2 + c5 * (n - 1) * (n - 2) + c6 * (n - 1) * (n - 2) / 2 + c7 * ( n - 1) = a * n**2 + b * n + c
+c1 * n + c2 * (n - 1) + c3 * (n - 1) + c4 * (n)(n + 1 1) / 2 + c5 * (n) * (n -1) / 2 + c6 * (n) * (n - 1) / 2 + c7 * ( n - 1) = a * n**2 + b * n + c
 
 a quadratic function of n,if we ignore a,b,c statement costs and n since the rate fo gowth for doesn't depend on it(for large n it's insignificant) we reach to 
 
 compelxity of Θ(n**2)
 
-average case is roughly equal to worst case
+Average case is roughly equal to worst case
 
 """
