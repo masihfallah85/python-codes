@@ -66,7 +66,7 @@ Worst case accures when all array is reverse sorted,so in each while loop ti hap
 
 T(n) =  c1 * n + c2 * (n - 1) + c3 * n-1 + c4 * sum of (i + 1) from 1 to n-1 + c5 * sum of (i) from 1 to n-1 + c6 * sum of (1 - 1) from 1 to n-1 + c7 * (n -1) =
 
-c1 * n + c2 * (n - 1) + c3 * (n - 1) + c4 * (n)(n + 1 1) / 2 + c5 * (n) * (n -1) / 2 + c6 * (n) * (n - 1) / 2 + c7 * ( n - 1) = a * n**2 + b * n + c
+c1 * n + c2 * (n - 1) + c3 * (n - 1) + c4 * (n)(n + 1 ) / 2 - 1 + c5 * (n) * (n -1) / 2 + c6 * (n) * (n - 1) / 2 + c7 * ( n - 1) = a * n**2 + b * n + c
 
 a quadratic function of n,if we ignore a,b,c statement costs and n since the rate fo gowth for doesn't depend on it(for large n it's insignificant) we reach to 
 
