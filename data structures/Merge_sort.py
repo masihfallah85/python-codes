@@ -61,6 +61,23 @@ def merge(arr, left, middle, right):
 
         k += 1
 
+    while i < n:
+
+        arr[k] = arr_1[i]
+
+        i += 1
+
+        k += 1
+
+    while j < n_1:
+
+        arr[k] = arr_2[j]
+
+        j += 1
+
+        k += 1
+
+
 def merge_sort(arr, left, right):
 
     """This function sorts an array by merge sort"""
