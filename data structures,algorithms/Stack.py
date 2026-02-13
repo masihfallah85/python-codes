@@ -1,0 +1,81 @@
+#Stack.py
+
+
+"""In this script we implement a stack"""
+
+
+class Empty(Exception):
+
+    """Error for attempting to access empty container"""
+
+    pass
+
+class Stack:
+
+    """This class implements a stack with python list data type"""
+
+    def __init__(self):
+
+        """Constructor"""
+
+        self._array = []
+    
+    def __len__(self):
+
+        """This function retruns number of element"""
+
+        return len(self._array)
+    
+    def isempty(self):
+
+        """This function verifies if stack is empty or not"""
+
+        return len(self._array) == 0
+    
+    def push(self,element):
+
+        """This function adds an element to stack"""
+
+        self._array.append(element)
+
+
+    def top(self):
+
+        """This function shows last added element of stack"""
+
+
+        if self.isempty():
+
+            raise Empty("Stack is empty")
+        
+        else:
+
+            return self._array[-1]
+    
+    def pop(self):
+
+
+        """This function removes last element added to stack"""
+
+        if self.isempty():
+
+            raise Empty("stack is empty")
+        
+        else:
+
+            self._array.pop()
+
+#Testing stack class
+if __name__ == "__main__"  :
+
+    stack = Stack()
+
+    stack.push(2)
+
+    stack.push(3)
+
+    print(stack.top())
+
+    stack.pop()
+
+    print(stack.top())
