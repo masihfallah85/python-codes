@@ -1,0 +1,3 @@
+# Agentic ai
+
+This folder contains scripts about agentic ai,types of agents wich use a foundation model wich is already trained to do tasks using prompts,chains etc....
