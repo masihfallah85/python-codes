@@ -287,7 +287,7 @@ class binary_tree(abstract_binary_tree):
 
         self._size = 1
 
-        self._root = self._Node(element)
+        self._root = self._node(element)
 
         return self._make_position(self._root)
 
@@ -303,7 +303,7 @@ class binary_tree(abstract_binary_tree):
         
         self._size += 1
 
-        node._left = self._Node(element, node)
+        node._left = self._node(element, node)
 
         return self._make_position(node._left)
 
@@ -319,7 +319,7 @@ class binary_tree(abstract_binary_tree):
         
         self._size += 1
 
-        node._right = self._Node(element, node)
+        node._right = self._node(element, node)
 
         return self._make_position(node._right)
     
